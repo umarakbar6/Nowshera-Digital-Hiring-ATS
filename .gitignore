@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules/
+/.pnp
+.pnp.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Sensitive credentials & runtime databases
+/data/
+/PRIVATE-CREDENTIALS.env
+.env*
+*.pem
+
+# Binary tools & archive files
+/work/cloudflared.exe
+*.zip
+*.exe
+
+# Local scratch files
+/test-*.mjs
+/list-*.mjs
+start-server.ps1
+run-demo-seed.ps1
