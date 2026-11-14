@@ -1,0 +1,17 @@
+title = "Repository secret guard"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Exact reviewed synthetic fixture or idempotency identifier; no provider credential"
+condition = "AND"
+paths = ['''(?:^|/)work/test\.mjs$''']
+regexTarget = "secret"
+regexes = ['''^recruiter\-pass\-123$''']
+
+[[allowlists]]
+description = "Exact reviewed synthetic fixture or idempotency identifier; no provider credential"
+condition = "AND"
+paths = ['''(?:^|/)work/run\-14\-mentor\-tests\.mjs$''']
+regexTarget = "secret"
+regexes = ['''^recruiter\-pass\-123$''']

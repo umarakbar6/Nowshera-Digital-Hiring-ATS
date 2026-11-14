@@ -24,3 +24,14 @@ yarn-debug.log*
 /list-*.mjs
 start-server.ps1
 run-demo-seed.ps1
+
+# Local credentials and generated runtime files
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.key
+node_modules/
+.venv/
+__pycache__/
+*.pyc
