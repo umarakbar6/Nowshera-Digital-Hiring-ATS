@@ -1,5 +1,7 @@
 services:
   n8n:
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
     image: docker.n8n.io/n8nio/n8n:2.47.7
     ports:
       - "127.0.0.1:5678:5678"
@@ -7,6 +9,10 @@ services:
       - N8N_HOST=localhost
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
+      - N8N_COMMUNITY_PACKAGES_ENABLED=false
+      - N8N_PUBLIC_API_DISABLED=true
+      - N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
+      - NODES_EXCLUDE=["n8n-nodes-base.executeCommand","n8n-nodes-base.localFileTrigger","n8n-nodes-base.readWriteFile"]
       - N8N_SECURE_COOKIE=false
       - GENERIC_TIMEZONE=Asia/Karachi
       - TZ=Asia/Karachi
